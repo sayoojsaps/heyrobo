@@ -3,7 +3,11 @@
 
 <xacro:include filename="$(find heyrobo_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find heyrobo_description)/urdf/heyrobo.trans" />
-<xacro:include filename="$(find heyrobo_description)/urdf/heyrobo.gazebo" />
+
+<xacro:include filename="$(find heyrobo_description)/gazebo/heyrobo_material.gazebo" />
+<xacro:include filename="$(find heyrobo_description)/gazebo/heyrobo_physics.gazebo" />
+<xacro:include filename="$(find heyrobo_description)/gazebo/heyrobo_plugins.gazebo" />
+
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="0.001782877615204312 -2.7386094551475455e-07 0.08422100119570049"/>
@@ -15,7 +19,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="FlatBlack"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -36,7 +40,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.069952 -0.024963"/>
@@ -57,7 +61,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 0.069952 -0.024963"/>
@@ -78,7 +82,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/buck_converter_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Orange"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
@@ -99,7 +103,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/caster_forward_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="White"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0 -0.013"/>
@@ -120,7 +124,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Yellow"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
@@ -141,7 +145,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Yellow"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
@@ -162,7 +166,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/motordriver_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Orange"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
@@ -183,7 +187,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/caster_backward_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="White"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0 -0.013"/>
@@ -204,7 +208,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/jetson_nano_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Green"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
@@ -225,7 +229,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/charger_module_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Red"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
@@ -246,7 +250,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/mpu_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Red"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
@@ -267,7 +271,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/depth_camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Blue"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.047529 -0.040026 -0.094"/>
@@ -288,7 +292,7 @@
     <geometry>
       <mesh filename="package://heyrobo_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="Black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.152"/>
