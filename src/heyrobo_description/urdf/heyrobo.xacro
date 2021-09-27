@@ -1,0 +1,381 @@
+<?xml version="1.0" ?>
+<robot name="heyrobo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find heyrobo_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find heyrobo_description)/urdf/heyrobo.trans" />
+<xacro:include filename="$(find heyrobo_description)/urdf/heyrobo.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.001782877615204312 -2.7386094551475455e-07 0.08422100119570049"/>
+    <mass value="0.23325325121754711"/>
+    <inertia ixx="0.000787" ixy="0.0" ixz="-2.3e-05" iyy="0.000843" iyz="0.0" izz="0.000564"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.552478321867922e-15 -0.007500423156312684 -2.333382158187236e-07"/>
+    <mass value="0.02699841135791531"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="0.0" iyy="9e-06" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.069952 -0.024963"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.069952 -0.024963"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.552478321867922e-15 0.007500423156312705 -2.333382158187236e-07"/>
+    <mass value="0.02699841135791531"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="0.0" iyy="9e-06" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.069952 -0.024963"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.069952 -0.024963"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="buck_converter_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04514571717117801 2.9566100750217767e-05 0.004879176337773128"/>
+    <mass value="0.010757707897424093"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/buck_converter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/buck_converter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_forward_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04999999999999999 0.0 -0.005120689655172414"/>
+    <mass value="0.003219085272378341"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.013"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/caster_forward_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.013"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/caster_forward_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.006445340381141e-14 0.03607865595745413 0.009950167512628356"/>
+    <mass value="0.11488744292785769"/>
+    <inertia ixx="1e-05" ixy="-0.0" ixz="0.0" iyy="1.5e-05" iyz="0.0" izz="1.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.006445340381141e-14 -0.03607865595745413 0.009950167512628356"/>
+    <mass value="0.03951542622996379"/>
+    <inertia ixx="4e-06" ixy="0.0" ixz="0.0" iyy="5e-06" iyz="-0.0" izz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motordriver_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.043723582455067224 -0.0005137429549447101 0.0025957215422437695"/>
+    <mass value="0.0026004233023750865"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/motordriver_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/motordriver_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_backward_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.05 0.0 -0.005120689655172414"/>
+    <mass value="0.003219085272378341"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.013"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/caster_backward_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.013"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/caster_backward_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jetson_nano_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005295113116831629 0.00021573889388830494 0.007516134720018386"/>
+    <mass value="0.04771635108753617"/>
+    <inertia ixx="1.3e-05" ixy="0.0" ixz="2e-06" iyy="1.8e-05" iyz="-0.0" izz="2.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/jetson_nano_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/jetson_nano_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="charger_module_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00017446359080985102 -0.05601040734689702 0.0012142978669051896"/>
+    <mass value="0.0009213756135170499"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/charger_module_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/charger_module_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mpu_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.3726447384165855e-05 0.05498913414138193 0.0005460155677621537"/>
+    <mass value="0.0005611587155407809"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/mpu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.069"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/mpu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="depth_camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0013832262885812088 -0.039535058234552355 -3.3248877983893532e-06"/>
+    <mass value="0.003323250846170174"/>
+    <inertia ixx="3e-06" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.047529 -0.040026 -0.094"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/depth_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.047529 -0.040026 -0.094"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/depth_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.010000000000000037"/>
+    <mass value="0.3782644380312132"/>
+    <inertia ixx="8.5e-05" ixy="-0.0" ixz="0.0" iyy="8.5e-05" iyz="0.0" izz="0.000145"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.152"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.152"/>
+    <geometry>
+      <mesh filename="package://heyrobo_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="motor_left" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.069952 0.008963"/>
+  <parent link="motor_left_1"/>
+  <child link="wheel_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="motor_right" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.069952 0.008963"/>
+  <parent link="motor_right_1"/>
+  <child link="wheel_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid30" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.016"/>
+  <parent link="base_link"/>
+  <child link="buck_converter_1"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.013"/>
+  <parent link="base_link"/>
+  <child link="caster_forward_1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.016"/>
+  <parent link="base_link"/>
+  <child link="motor_left_1"/>
+</joint>
+
+<joint name="Rigid33" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.016"/>
+  <parent link="base_link"/>
+  <child link="motor_right_1"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.016"/>
+  <parent link="base_link"/>
+  <child link="motordriver_1"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.013"/>
+  <parent link="base_link"/>
+  <child link="caster_backward_1"/>
+</joint>
+
+<joint name="Rigid36" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.069"/>
+  <parent link="base_link"/>
+  <child link="jetson_nano_1"/>
+</joint>
+
+<joint name="Rigid37" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.069"/>
+  <parent link="base_link"/>
+  <child link="charger_module_1"/>
+</joint>
+
+<joint name="Rigid38" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.069"/>
+  <parent link="base_link"/>
+  <child link="mpu_1"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin rpy="0 0 0" xyz="0.047529 0.040026 0.094"/>
+  <parent link="base_link"/>
+  <child link="depth_camera_1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.152"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>
