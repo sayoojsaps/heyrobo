@@ -12,7 +12,7 @@
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
-    <arg name="world_name" value="$(find heyrobo_description)/world/actor_demo.world"/>
+    <arg name="world_name" value="$(find heyrobo_description)/world/actor_demo.sdf"/>
   </include>
 
 </launch>
