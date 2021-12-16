@@ -5,8 +5,8 @@ Teleoperate and Autonomous navigation of a 2 wheeled mobile robot
 `roslaunch heyrobo_description gazebo.launch`
 `roslaunch heyrobo_description display.launch`
 #### In-order to teleoperate the mobile robot
-`sudo apt-get install ros-noetic-teleop-twist-keyboard`
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+*.`sudo apt-get install ros-noetic-teleop-twist-keyboard`
+`rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
 #### Mapping
 `sudo apt-get install ros-noetic-gmapping`
 `rosrun gmapping slam_gmapping`
