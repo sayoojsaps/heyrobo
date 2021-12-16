@@ -1,6 +1,6 @@
 # heyrobo
 Teleoperation and Autonomous navigation of a 2 wheeled mobile robot using ros is performed here.
-The ros version `noetic` is used here. Change the keyword `noetic` as per which ros version you're using.
+The ros version `noetic` is used, change the keyword `noetic` as per which ros version you're using.
 
 
 #### In-order to launch the robot in gazebo and rviz type these commands in terminal
