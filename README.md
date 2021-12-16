@@ -1,5 +1,5 @@
 # heyrobo
-Teleoperation and Autonomous navigation of a 2 wheeled mobile robot
+Teleoperation and Autonomous navigation of a 2 wheeled mobile robot.
 The ros version `noetic` is used here. Change the keyword `noetic` as per which ros version you're using.
 
 
