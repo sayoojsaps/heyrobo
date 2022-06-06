@@ -1,0 +1,8 @@
+prefix=/home/sayooj/heyrobo_ws/install
+
+Name: heyrobo_description
+Description: Description of heyrobo_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
