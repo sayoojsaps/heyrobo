@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sayooj/heyrobo_ws/install/lib;/home/sayooj/catkin_ws/install_isolated/lib;/home/sayooj/pragati_ws/devel/lib;/home/sayooj/mobilemanipulator_ws/devel/lib;/home/sayooj/arm_ws/devel/lib;/home/sayooj/heyrobo_ws/devel/lib;/home/sayooj/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/sayooj/heyrobo_ws/install/lib;/home/sayooj/catkin_ws/install_isolated/lib;/home/sayooj/pragati_ws/devel/lib;/home/sayooj/heyrobo_ws/devel/lib;/home/sayooj/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

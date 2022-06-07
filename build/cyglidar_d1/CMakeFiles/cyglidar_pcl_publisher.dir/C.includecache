@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sayooj/heyrobo_ws/src/cyglidar_d1/include/CygbotParser.h
+stdint.h
+-
+
+/home/sayooj/heyrobo_ws/src/cyglidar_d1/src/CygbotParser.c
+CygbotParser.h
+/home/sayooj/heyrobo_ws/src/cyglidar_d1/src/CygbotParser.h
+

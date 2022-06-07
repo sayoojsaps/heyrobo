@@ -131,8 +131,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/sayooj/heyrobo_ws/build/gtest/cmake_install.cmake")
-  include("/home/sayooj/heyrobo_ws/build/heyrobo_navigation/cmake_install.cmake")
-  include("/home/sayooj/heyrobo_ws/build/heyrobo_description/cmake_install.cmake")
 
 endif()
 
